@@ -19,8 +19,13 @@ class HomeViewModel{
         var request = URLRequest(url: url)
         request.httpMethod = HTTPHeaderFields.get
         request.setValue(HTTPHeaderFields.applicationJson, forHTTPHeaderField: HTTPHeaderFields.contentType)
-        HttpUtility.shared.request(urlRequest: request, resultType: SettingsModel.self) { result in
-            self.settingsModel = result
+        HttpUtility.shared.request(urlRequest: request, resultType: SettingsModel.self) { result,error  in
+            if error == nil{
+                self.settingsModel = result
+            } else{
+                print(error ?? "Error")
+            }
+            
             homeGroup.leave()
         }
         homeGroup.enter()
@@ -28,8 +33,12 @@ class HomeViewModel{
         var requestPet = URLRequest(url: urlPet)
         requestPet.httpMethod = HTTPHeaderFields.get
         requestPet.setValue(HTTPHeaderFields.applicationJson, forHTTPHeaderField: HTTPHeaderFields.contentType)
-        HttpUtility.shared.request(urlRequest: requestPet, resultType: PetsModel.self) { result in
-            self.petsModel = result
+        HttpUtility.shared.request(urlRequest: requestPet, resultType: PetsModel.self) { result,error  in
+            if error == nil{
+                self.petsModel = result
+            } else{
+                print(error ?? "Error")
+            }
             homeGroup.leave()
         }
         homeGroup.notify(queue: .main) { [weak self] in
