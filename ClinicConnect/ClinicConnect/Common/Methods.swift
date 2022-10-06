@@ -28,14 +28,11 @@ func getOfficeHours(vc:UIViewController){
         let startWorkinngHour = now.dateAt(hours: Int(Double(firstValue) ?? 9))
         let endWorkinngHour = now.dateAt(hours: Int(Double(lastValue) ?? 18))
         if now >= startWorkinngHour && now <= endWorkinngHour {
-            print("The time is between")
             showAlert(vc: vc, title: Constants.alert, message: Constants.thankYou)
         } else {
-            print("The time is not between")
             showAlert(vc: vc, title: Constants.alert, message: Constants.workHoursEnded)
         }
     } else {
-        print("The time is not between")
         showAlert(vc: vc, title: Constants.alert, message: Constants.workHoursEnded)
     }
 }

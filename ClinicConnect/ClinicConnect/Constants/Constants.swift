@@ -18,7 +18,7 @@ struct Constants {
     static let pleaseCheckInternetConnection = "Please Check Internet Connection"
     static let newtworkError = "Network Alert"
     static let noDatatext = "No Data Available"
-    
+    static let officeHours = "Office Hours:"
     static let alert = "Alert"
     static let thankYou = "Thank you for getting in touch with us. We’ll get back to you as soon as possible"
     static let workHoursEnded = "Work hours has ended. Please contact us again on the next work day"
@@ -38,4 +38,11 @@ struct ScreenTitle {
     static let home = "Home"
     static let petDetails = "Pet Details"
     
+}
+
+// MARK: - Parameter Name
+struct HTTPHeaderFields {
+    static let get = "get"
+    static let applicationJson = "application/json"
+    static let contentType = "Content-Type"
 }

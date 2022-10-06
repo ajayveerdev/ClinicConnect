@@ -33,14 +33,15 @@ class HomeViewController: UIViewController {
         homeViewModel.getConfigData { [weak self] in
             DispatchQueue.main.async {
                 self?.tblPetDetails.reloadData()
-                self?.btnChat.isHidden = self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? false
-                self?.btnCall.isHidden = self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? false
+                self?.btnChat.isHidden = !(self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true)
+                self?.btnCall.isHidden = !(self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true)
+                
                 if self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true || self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true {
-                    self?.btnStackView.isHidden = true
-                } else{
                     self?.btnStackView.isHidden = false
+                } else{
+                    self?.btnStackView.isHidden = true
                 }
-                self?.lblOfficeHours.text = "Office Hours: \(self?.homeViewModel.settingsModel?.settings?.workHours ?? "")"
+                self?.lblOfficeHours.text = "\(Constants.officeHours) \(self?.homeViewModel.settingsModel?.settings?.workHours ?? "")"
             }
         }
     }
