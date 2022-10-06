@@ -31,8 +31,8 @@ extension UIImageView {
             return
         }
         let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView.init(style: .medium)
-        activityIndicator.center = self.center
-        addSubview(activityIndicator)
+        activityIndicator.frame = CGRect(x: self.frame.height/2 - 20, y:  self.frame.width/2 - 20, width: 20, height: 20)
+        self.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error != nil {
