@@ -30,8 +30,11 @@ class HomeViewController: UIViewController {
     }
     
     func fetchDataForHome(){
+        let frame = CGRect(x: self.view.frame.width/2 - 20, y:  self.view.frame.height/2 - 20, width: 20, height: 20)
+        addActivityIndicator(style: .medium, view: self.view, frame: frame)
         homeViewModel.getConfigData { [weak self] in
             DispatchQueue.main.async {
+                showActivityIndicator(show: false)
                 self?.tblPetDetails.reloadData()
                 self?.btnChat.isHidden = !(self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true)
                 self?.btnCall.isHidden = !(self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true)

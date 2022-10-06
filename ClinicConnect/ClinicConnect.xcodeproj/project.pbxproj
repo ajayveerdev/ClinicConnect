@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA73ABB228EEB2B90013A9A2 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73ABB128EEB2B90013A9A2 /* ActivityIndicator.swift */; };
 		FABBF1E228F05E3400B97D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF1E128F05E3400B97D5B /* AppDelegate.swift */; };
 		FABBF1E428F05E3400B97D5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF1E328F05E3400B97D5B /* SceneDelegate.swift */; };
 		FABBF1E628F05E3400B97D5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF1E528F05E3400B97D5B /* HomeViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA73ABB128EEB2B90013A9A2 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		FABBF1DE28F05E3400B97D5B /* ClinicConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClinicConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABBF1E128F05E3400B97D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABBF1E328F05E3400B97D5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				FABBF20C28F096AA00B97D5B /* HttpUtility.swift */,
 				FABBF20E28F0ACD100B97D5B /* Extension.swift */,
 				FABBF21028F0B4B400B97D5B /* Methods.swift */,
+				FA73ABB128EEB2B90013A9A2 /* ActivityIndicator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				FABBF20028F0884C00B97D5B /* Constants.swift in Sources */,
 				FABBF20528F0897C00B97D5B /* HomeViewModel.swift in Sources */,
 				FABBF20D28F096AA00B97D5B /* HttpUtility.swift in Sources */,
+				FA73ABB228EEB2B90013A9A2 /* ActivityIndicator.swift in Sources */,
 				FABBF1E628F05E3400B97D5B /* HomeViewController.swift in Sources */,
 				FABBF20F28F0ACD100B97D5B /* Extension.swift in Sources */,
 				FABBF1FC28F0870D00B97D5B /* PetTableViewCell.swift in Sources */,

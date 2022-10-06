@@ -11,7 +11,8 @@ import Foundation
 struct Constants {
     
     struct BaseUrl {
-        static let baseAPI =  "https://raw.githubusercontent.com/ajayveerdev/files/main/"
+        //static let baseAPI =  "https://raw.githubusercontent.com/ajayveerdev/files/main/"
+        static let baseAPI = "http://18.191.26.122/veer/"
     }
     
     static let okay = "Okay"
@@ -30,6 +31,11 @@ struct Constants {
     struct ViewController {
         static let petDetailsViewController = "PetDetailsViewController"
     }
+}
+
+// MARK: - Date formatters
+struct DATEFORMATTERS {
+    static let HHMM: String = "HH:mm"
 }
 
 

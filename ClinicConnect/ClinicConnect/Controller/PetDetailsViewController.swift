@@ -10,39 +10,22 @@ import WebKit
 
 class PetDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
-    var webView: WKWebView!
+    @IBOutlet weak var webViewContent: WKWebView!
     var activityIndicator: UIActivityIndicatorView!
     var petsModel: Pets?
-    
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = petsModel?.title
-        activityIndicator = UIActivityIndicatorView()
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = UIActivityIndicatorView.Style.medium
-        activityIndicator.color = .red
-        view.addSubview(activityIndicator)
+
+        webViewContent.navigationDelegate = self
+
+        let frame = CGRect(x: self.view.frame.width/2 - 10, y:  self.view.frame.height/2 - 20, width: 20, height: 20)
+        addActivityIndicator(style: .medium, view: self.view, frame: frame)
         
         let url = URL(string: petsModel?.content_url ?? "")!
-        webView.load(URLRequest(url: url))
+        webViewContent.load(URLRequest(url: url))
         
-    }
-    
-    func showActivityIndicator(show: Bool) {
-        if show {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-        }
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

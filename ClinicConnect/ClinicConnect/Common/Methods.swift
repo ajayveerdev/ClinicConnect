@@ -13,6 +13,7 @@ func showAlert(vc:UIViewController,title : String, message : String,_ completion
     alert.addAction(UIAlertAction(title: Constants.okay, style: UIAlertAction.Style.default, handler: nil))
     vc.present(alert, animated: true, completion: nil)
 }
+
 func getOfficeHours(vc:UIViewController){
     let calendar = Calendar(identifier: .gregorian)
     let now = Date()
@@ -23,10 +24,10 @@ func getOfficeHours(vc:UIViewController){
         if let vcLocal = vc as? HomeViewController {
             fullArr = vcLocal.homeViewModel.settingsModel?.settings?.workHours?.components(separatedBy: " ") ?? []
         }
-        let firstValue: String = fullArr[1]
-        let lastValue: String = fullArr[3]
-        let startWorkinngHour = now.dateAt(hours: Int(Double(firstValue) ?? 9))
-        let endWorkinngHour = now.dateAt(hours: Int(Double(lastValue) ?? 18))
+        let startHour: String = fullArr[1]
+        let endHour: String = fullArr[3]
+        let startWorkinngHour = now.dateAt(hours:getTimeToIntValue(timeInString: startHour))
+        let endWorkinngHour = now.dateAt(hours: getTimeToIntValue(timeInString: endHour))
         if now >= startWorkinngHour && now <= endWorkinngHour {
             showAlert(vc: vc, title: Constants.alert, message: Constants.thankYou)
         } else {
@@ -35,4 +36,14 @@ func getOfficeHours(vc:UIViewController){
     } else {
         showAlert(vc: vc, title: Constants.alert, message: Constants.workHoursEnded)
     }
+}
+
+func getTimeToIntValue(timeInString: String)->Int {
+    let calendar = Calendar(identifier: .gregorian)
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = DATEFORMATTERS.HHMM
+    guard let intHour = dateFormatter.date(from: timeInString) else { return 0}
+    let timeInInt = calendar.component(.hour ,from: intHour)
+    return timeInInt
+    
 }

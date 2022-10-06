@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C55A703A-4903-4025-8F5C-CB3E8DEB87F1"
-            shouldBeEnabled = "Yes"
+            uuid = "0F2EA48D-2B5D-47A1-879E-8E487BFFC810"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ClinicConnect/Controller/PetDetailsViewController.swift"
+            filePath = "ClinicConnect/Controller/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "webView(_:didFinish:)"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "fetchDataForHome()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6326ECB8-03A5-4CFE-8750-667D0E910B8C"
+            uuid = "C97908C8-BE25-4BE1-BB9E-657A4E653DE2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ClinicConnect/Controller/PetDetailsViewController.swift"
+            filePath = "ClinicConnect/ViewModel/HomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "webView(_:didStartProvisionalNavigation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AB6C8E70-3EA2-4F3D-AD02-CAE7BCFFABDC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ClinicConnect/Controller/PetDetailsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "webView(_:didFail:withError:)"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getConfigData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
