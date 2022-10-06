@@ -22,37 +22,26 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.fetchDataForHome()
     }
     
     func fetchDataForHome(){
-        homeViewModel.getConfigData {[weak self] in
-            
-                DispatchQueue.main.async {
-                    self?.btnChat.isHidden = self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? false
-                    self?.btnCall.isHidden = self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? false
-                    
-                    if self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true || self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true {
-                        self?.btnStackView.isHidden = true
-                    } else{
-                        self?.btnStackView.isHidden = false
-                    }
-                    
-                    self?.lblOfficeHours.text = "Office Hours: \(self?.homeViewModel.settingsModel?.settings?.workHours ?? "")"
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
-                        self?.tblPetDetails.reloadData()
-                    }
-                    
+        homeViewModel.getConfigData { [weak self] in
+            DispatchQueue.main.async {
+                self?.tblPetDetails.reloadData()
+                self?.btnChat.isHidden = self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? false
+                self?.btnCall.isHidden = self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? false
+                if self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true || self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true {
+                    self?.btnStackView.isHidden = true
+                } else{
+                    self?.btnStackView.isHidden = false
                 }
-                
-           
+                self?.lblOfficeHours.text = "Office Hours: \(self?.homeViewModel.settingsModel?.settings?.workHours ?? "")"
+            }
         }
     }
     
@@ -61,7 +50,6 @@ class HomeViewController: UIViewController {
         viewOfficeHours.layer.borderWidth = 2
         viewOfficeHours.layer.borderColor = UIColor.gray.cgColor
         registerTableViewCell()
-        
     }
     
     // MARK: - RegisterTableViewCell
@@ -70,35 +58,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btnChatTapped(_ sender: Any) {
-        getOfficeHours()
+        getOfficeHours(vc: self)
     }
     
     @IBAction func btnCallTapped(_ sender: Any) {
-        getOfficeHours()
+        getOfficeHours(vc: self)
     }
-    
-    
-    func getOfficeHours(){
-        let calendar = Calendar(identifier: .gregorian)
-        let now = Date()
-        let weekday = calendar.component(.weekday, from: now as Date)
-        print(weekday)
-        if weekday != 1 && weekday != 7 {
-            let startWorkinngHour = now.dateAt(hours: 9)
-            let endWorkinngHour = now.dateAt(hours: 18)
-            if now >= startWorkinngHour && now <= endWorkinngHour {
-                print("The time is between")
-                showAlert(vc: self, title: Constants.alert, message: Constants.thankYou)
-            } else {
-                print("The time is not between")
-                showAlert(vc: self, title: Constants.alert, message: Constants.workHoursEnded)
-            }
-        } else {
-            print("The time is not between")
-            showAlert(vc: self, title: Constants.alert, message: Constants.workHoursEnded)
-        }
-    }
-    
 }
 
 

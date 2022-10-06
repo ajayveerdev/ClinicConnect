@@ -10,7 +10,6 @@ import Foundation
 
 struct SettingsModel: Codable {
     var settings : Settings?
-
 }
 
 struct Settings : Codable {

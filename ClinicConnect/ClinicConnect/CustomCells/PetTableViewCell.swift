@@ -9,7 +9,7 @@ import UIKit
 
 class PetTableViewCell: UITableViewCell {
     
-  
+    
     @IBOutlet weak var lblPetName: UILabel!
     @IBOutlet weak var imgPet: UIImageView!
     
@@ -20,7 +20,7 @@ class PetTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
     func configure(pets: Pets?) {
         lblPetName.text = pets?.title
         imgPet.loadImageUsingCache(withUrl: pets?.image_url ?? "")

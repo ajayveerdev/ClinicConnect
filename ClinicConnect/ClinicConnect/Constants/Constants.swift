@@ -13,7 +13,7 @@ struct Constants {
     struct BaseUrl {
         static let baseAPI =  "https://raw.githubusercontent.com/ajayveerdev/files/main/"
     }
-
+    
     static let okay = "Okay"
     static let pleaseCheckInternetConnection = "Please Check Internet Connection"
     static let newtworkError = "Network Alert"
@@ -30,7 +30,6 @@ struct Constants {
     struct ViewController {
         static let petDetailsViewController = "PetDetailsViewController"
     }
-    
 }
 
 

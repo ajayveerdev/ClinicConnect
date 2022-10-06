@@ -10,7 +10,6 @@ import Foundation
 
 struct PetsModel: Decodable {
     let pets : [Pets]?
-
 }
 
 struct Pets : Decodable {

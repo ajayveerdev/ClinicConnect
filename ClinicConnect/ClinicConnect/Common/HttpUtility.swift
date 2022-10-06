@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HttpUtility{
+class HttpUtility{
     
     static let shared = HttpUtility()
     
@@ -17,9 +17,8 @@ struct HttpUtility{
         
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             if let data = data {
-                if let settings = try? JSONDecoder().decode(T?.self, from: data) {
-                    //print(settings)
-                    completionHandler(settings)
+                if let response = try? JSONDecoder().decode(T?.self, from: data) {
+                    completionHandler(response)
                 } else {
                     print("Invalid Response")
                 }
@@ -28,8 +27,5 @@ struct HttpUtility{
             }
         }
         task.resume()
-
-        
     }
-    
 }
