@@ -32,32 +32,27 @@ class HomeViewController: UIViewController {
     }
     
     func fetchDataForHome(){
-        homeViewModel.getConfigData {success in
-            print("Success", success)
+        homeViewModel.getConfigData {[weak self] in
             
-            if success {
-                
                 DispatchQueue.main.async {
-                    self.btnChat.isHidden = self.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true
-                    self.btnCall.isHidden = self.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true
+                    self?.btnChat.isHidden = self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? false
+                    self?.btnCall.isHidden = self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? false
                     
-                    if self.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true || self.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true {
-                        self.btnStackView.isHidden = true
+                    if self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true || self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true {
+                        self?.btnStackView.isHidden = true
                     } else{
-                        self.btnStackView.isHidden = false
+                        self?.btnStackView.isHidden = false
                     }
                     
-                    self.lblOfficeHours.text = "Office Hours: \(self.homeViewModel.settingsModel?.settings?.workHours ?? "")"
+                    self?.lblOfficeHours.text = "Office Hours: \(self?.homeViewModel.settingsModel?.settings?.workHours ?? "")"
                     
                     DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
-                        self.tblPetDetails.reloadData()
+                        self?.tblPetDetails.reloadData()
                     }
                     
                 }
                 
-            } else{
-                
-            }
+           
         }
     }
     
@@ -128,7 +123,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let petDetailViewController = storyBoard.instantiateViewController(withIdentifier: Constants.ViewController.petDetailsViewController) as! PetDetailsViewController
-        petDetailViewController.petContentUrl =  self.homeViewModel.petsModel?.pets?[indexPath.row].content_url ?? ""
+        petDetailViewController.petsModel =  self.homeViewModel.petsModel?.pets?[indexPath.row]
         self.navigationController?.pushViewController(petDetailViewController, animated: true)
     }
     

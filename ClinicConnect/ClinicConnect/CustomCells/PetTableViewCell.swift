@@ -23,8 +23,6 @@ class PetTableViewCell: UITableViewCell {
 
     func configure(pets: Pets?) {
         lblPetName.text = pets?.title
-        //let string = "\(Constants.BaseUrl.imageURL)\(movies?.backdrop_path ?? "")"
-        //let url = URL(string: string)
-       // movieImageView.downloadImage(url: url, view: self)
+        imgPet.loadImageUsingCache(withUrl: pets?.image_url ?? "")
     }
 }

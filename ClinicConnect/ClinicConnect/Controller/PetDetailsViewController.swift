@@ -12,7 +12,7 @@ class PetDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDele
     
     var webView: WKWebView!
     var activityIndicator: UIActivityIndicatorView!
-    var petContentUrl = ""
+    var petsModel: Pets?
     
     override func loadView() {
         webView = WKWebView()
@@ -24,7 +24,7 @@ class PetDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = petsModel?.title
         activityIndicator = UIActivityIndicatorView()
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
@@ -32,7 +32,7 @@ class PetDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDele
         activityIndicator.color = .red
         view.addSubview(activityIndicator)
         
-        let url = URL(string: self.petContentUrl)!
+        let url = URL(string: petsModel?.content_url ?? "")!
         webView.load(URLRequest(url: url))
         
     }
