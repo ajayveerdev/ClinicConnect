@@ -36,10 +36,14 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 showActivityIndicator(show: false)
                 self?.tblPetDetails.reloadData()
-                self?.btnChat.isHidden = !(self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true)
-                self?.btnCall.isHidden = !(self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true)
                 
-                if self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true || self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true {
+                let isChatEnabled = self?.homeViewModel.settingsModel?.settings?.isChatEnabled ?? true
+                let isCallEnabled = self?.homeViewModel.settingsModel?.settings?.isCallEnabled ?? true
+                
+                self?.btnChat.isHidden = !isChatEnabled
+                self?.btnCall.isHidden = !isCallEnabled
+                
+                if isChatEnabled || isCallEnabled {
                     self?.btnStackView.isHidden = false
                 } else{
                     self?.btnStackView.isHidden = true

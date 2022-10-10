@@ -12,7 +12,7 @@ import UIKit
     
     func addActivityIndicator(style: UIActivityIndicatorView.Style, view: UIView, frame: CGRect){
         activityIndicator = UIActivityIndicatorView.init(style: style)
-        //activityIndicator.hidesWhenStopped = true
+        activityIndicator.hidesWhenStopped = true
         activityIndicator.frame =  frame
         view.addSubview(activityIndicator)
         showActivityIndicator(show: true)
