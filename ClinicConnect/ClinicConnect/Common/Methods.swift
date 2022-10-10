@@ -14,30 +14,6 @@ func showAlert(vc:UIViewController,title : String, message : String,_ completion
     vc.present(alert, animated: true, completion: nil)
 }
 
-func getOfficeHours(vc:UIViewController){
-    let calendar = Calendar(identifier: .gregorian)
-    let now = Date()
-    let weekday = calendar.component(.weekday, from: now as Date)
-    print(weekday)
-    if weekday != 1 && weekday != 7 {
-        var fullArr:[String] = []
-        if let vcLocal = vc as? HomeViewController {
-            fullArr = vcLocal.homeViewModel.settingsModel?.settings?.workHours?.components(separatedBy: " ") ?? []
-        }
-        let startHour: String = fullArr[1]
-        let endHour: String = fullArr[3]
-        let startWorkinngHour = now.dateAt(hours:getTimeToIntValue(timeInString: startHour))
-        let endWorkinngHour = now.dateAt(hours: getTimeToIntValue(timeInString: endHour))
-        if now >= startWorkinngHour && now <= endWorkinngHour {
-            showAlert(vc: vc, title: Constants.alert, message: Constants.thankYou)
-        } else {
-            showAlert(vc: vc, title: Constants.alert, message: Constants.workHoursEnded)
-        }
-    } else {
-        showAlert(vc: vc, title: Constants.alert, message: Constants.workHoursEnded)
-    }
-}
-
 func getTimeToIntValue(timeInString: String)->Int {
     let calendar = Calendar(identifier: .gregorian)
     let dateFormatter = DateFormatter()

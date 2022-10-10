@@ -11,8 +11,8 @@ import Foundation
 struct Constants {
     
     struct BaseUrl {
-        static let baseAPI =  "https://raw.githubusercontent.com/ajayveerdev/files/main/"
-        //static let baseAPI = "http://18.191.26.122/veer/"
+        //static let baseAPI =  "https://raw.githubusercontent.com/ajayveerdev/files/main/"
+        static let baseAPI = "http://18.191.26.122/veer/"
     }
     
     static let okay = "Okay"

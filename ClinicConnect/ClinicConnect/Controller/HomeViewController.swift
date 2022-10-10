@@ -62,11 +62,15 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func btnChatTapped(_ sender: Any) {
-        getOfficeHours(vc: self)
+        self.homeViewModel.getOfficeHours { available in
+            showAlert(vc: self, title: Constants.alert, message: available ? Constants.thankYou : Constants.workHoursEnded)
+        }
     }
     
     @IBAction func btnCallTapped(_ sender: Any) {
-        getOfficeHours(vc: self)
+        self.homeViewModel.getOfficeHours { available in
+            showAlert(vc: self, title: Constants.alert, message: available ? Constants.thankYou : Constants.workHoursEnded)
+        }
     }
 }
 
