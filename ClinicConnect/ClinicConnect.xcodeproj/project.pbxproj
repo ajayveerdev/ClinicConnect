@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FA73ABB228EEB2B90013A9A2 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73ABB128EEB2B90013A9A2 /* ActivityIndicator.swift */; };
+		FA73ABBA28F4854E0013A9A2 /* ClinicConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73ABB928F4854E0013A9A2 /* ClinicConnectTests.swift */; };
+		FA73ABD128F48EED0013A9A2 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73ABD028F48EED0013A9A2 /* HomeViewModelTests.swift */; };
+		FA73ABD328F490450013A9A2 /* PetsModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73ABD228F490450013A9A2 /* PetsModelMock.swift */; };
+		FA73ABD528F4938E0013A9A2 /* SettingModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA73ABD428F4938E0013A9A2 /* SettingModelMock.swift */; };
 		FABBF1E228F05E3400B97D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF1E128F05E3400B97D5B /* AppDelegate.swift */; };
 		FABBF1E428F05E3400B97D5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF1E328F05E3400B97D5B /* SceneDelegate.swift */; };
 		FABBF1E628F05E3400B97D5B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF1E528F05E3400B97D5B /* HomeViewController.swift */; };
@@ -26,8 +30,31 @@
 		FABBF21328F0B7CD00B97D5B /* PetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBF21228F0B7CD00B97D5B /* PetDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FA73ABBB28F4854E0013A9A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FABBF1D628F05E3400B97D5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FABBF1DD28F05E3400B97D5B;
+			remoteInfo = ClinicConnect;
+		};
+		FA73ABCA28F485630013A9A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FABBF1D628F05E3400B97D5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FABBF1DD28F05E3400B97D5B;
+			remoteInfo = ClinicConnect;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FA73ABB128EEB2B90013A9A2 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		FA73ABB728F4854E0013A9A2 /* ClinicConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClinicConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA73ABB928F4854E0013A9A2 /* ClinicConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicConnectTests.swift; sourceTree = "<group>"; };
+		FA73ABC428F485630013A9A2 /* ClinicConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClinicConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA73ABD028F48EED0013A9A2 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		FA73ABD228F490450013A9A2 /* PetsModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsModelMock.swift; sourceTree = "<group>"; };
+		FA73ABD428F4938E0013A9A2 /* SettingModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModelMock.swift; sourceTree = "<group>"; };
 		FABBF1DE28F05E3400B97D5B /* ClinicConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClinicConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABBF1E128F05E3400B97D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABBF1E328F05E3400B97D5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +76,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA73ABB428F4854E0013A9A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA73ABC128F485630013A9A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FABBF1DB28F05E3400B97D5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,10 +100,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA73ABB828F4854E0013A9A2 /* ClinicConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA73ABCF28F48EB90013A9A2 /* ViewModel */,
+				FA73ABB928F4854E0013A9A2 /* ClinicConnectTests.swift */,
+			);
+			path = ClinicConnectTests;
+			sourceTree = "<group>";
+		};
+		FA73ABCF28F48EB90013A9A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA73ABD028F48EED0013A9A2 /* HomeViewModelTests.swift */,
+				FA73ABD228F490450013A9A2 /* PetsModelMock.swift */,
+				FA73ABD428F4938E0013A9A2 /* SettingModelMock.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FABBF1D528F05E3400B97D5B = {
 			isa = PBXGroup;
 			children = (
 				FABBF1E028F05E3400B97D5B /* ClinicConnect */,
+				FA73ABB828F4854E0013A9A2 /* ClinicConnectTests */,
 				FABBF1DF28F05E3400B97D5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				FABBF1DE28F05E3400B97D5B /* ClinicConnect.app */,
+				FA73ABB728F4854E0013A9A2 /* ClinicConnectTests.xctest */,
+				FA73ABC428F485630013A9A2 /* ClinicConnectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +214,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA73ABB628F4854E0013A9A2 /* ClinicConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA73ABBF28F4854E0013A9A2 /* Build configuration list for PBXNativeTarget "ClinicConnectTests" */;
+			buildPhases = (
+				FA73ABB328F4854E0013A9A2 /* Sources */,
+				FA73ABB428F4854E0013A9A2 /* Frameworks */,
+				FA73ABB528F4854E0013A9A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA73ABBC28F4854E0013A9A2 /* PBXTargetDependency */,
+			);
+			name = ClinicConnectTests;
+			productName = ClinicConnectTests;
+			productReference = FA73ABB728F4854E0013A9A2 /* ClinicConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA73ABC328F485630013A9A2 /* ClinicConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA73ABCC28F485630013A9A2 /* Build configuration list for PBXNativeTarget "ClinicConnectUITests" */;
+			buildPhases = (
+				FA73ABC028F485630013A9A2 /* Sources */,
+				FA73ABC128F485630013A9A2 /* Frameworks */,
+				FA73ABC228F485630013A9A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA73ABCB28F485630013A9A2 /* PBXTargetDependency */,
+			);
+			name = ClinicConnectUITests;
+			productName = ClinicConnectUITests;
+			productReference = FA73ABC428F485630013A9A2 /* ClinicConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		FABBF1DD28F05E3400B97D5B /* ClinicConnect */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FABBF1F228F05E3600B97D5B /* Build configuration list for PBXNativeTarget "ClinicConnect" */;
@@ -178,6 +277,14 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					FA73ABB628F4854E0013A9A2 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = FABBF1DD28F05E3400B97D5B;
+					};
+					FA73ABC328F485630013A9A2 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = FABBF1DD28F05E3400B97D5B;
+					};
 					FABBF1DD28F05E3400B97D5B = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -197,11 +304,27 @@
 			projectRoot = "";
 			targets = (
 				FABBF1DD28F05E3400B97D5B /* ClinicConnect */,
+				FA73ABB628F4854E0013A9A2 /* ClinicConnectTests */,
+				FA73ABC328F485630013A9A2 /* ClinicConnectUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA73ABB528F4854E0013A9A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA73ABC228F485630013A9A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FABBF1DC28F05E3400B97D5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +339,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA73ABB328F4854E0013A9A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA73ABBA28F4854E0013A9A2 /* ClinicConnectTests.swift in Sources */,
+				FA73ABD128F48EED0013A9A2 /* HomeViewModelTests.swift in Sources */,
+				FA73ABD528F4938E0013A9A2 /* SettingModelMock.swift in Sources */,
+				FA73ABD328F490450013A9A2 /* PetsModelMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA73ABC028F485630013A9A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FABBF1DA28F05E3400B97D5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +379,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FA73ABBC28F4854E0013A9A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FABBF1DD28F05E3400B97D5B /* ClinicConnect */;
+			targetProxy = FA73ABBB28F4854E0013A9A2 /* PBXContainerItemProxy */;
+		};
+		FA73ABCB28F485630013A9A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FABBF1DD28F05E3400B97D5B /* ClinicConnect */;
+			targetProxy = FA73ABCA28F485630013A9A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FABBF1E728F05E3400B97D5B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -258,6 +412,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA73ABBD28F4854E0013A9A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ClinicConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClinicConnect.app/ClinicConnect";
+			};
+			name = Debug;
+		};
+		FA73ABBE28F4854E0013A9A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ClinicConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClinicConnect.app/ClinicConnect";
+			};
+			name = Release;
+		};
+		FA73ABCD28F485630013A9A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ClinicConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClinicConnect;
+			};
+			name = Debug;
+		};
+		FA73ABCE28F485630013A9A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ClinicConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClinicConnect;
+			};
+			name = Release;
+		};
 		FABBF1F028F05E3600B97D5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -429,6 +649,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA73ABBF28F4854E0013A9A2 /* Build configuration list for PBXNativeTarget "ClinicConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA73ABBD28F4854E0013A9A2 /* Debug */,
+				FA73ABBE28F4854E0013A9A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA73ABCC28F485630013A9A2 /* Build configuration list for PBXNativeTarget "ClinicConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA73ABCD28F485630013A9A2 /* Debug */,
+				FA73ABCE28F485630013A9A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FABBF1D928F05E3400B97D5B /* Build configuration list for PBXProject "ClinicConnect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

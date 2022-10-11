@@ -52,20 +52,31 @@ class HomeViewModel{
         let now = Date()
         let weekday = calendar.component(.weekday, from: now as Date)
         print(weekday)
-        if weekday != 1 && weekday != 7 {
-            let fullArr:[String] = self.settingsModel?.settings?.workHours?.components(separatedBy: " ") ?? []
-            let startHour: String = fullArr[1]
-            let endHour: String = fullArr[3]
-            let startWorkinngHour = now.dateAt(hours:getTimeToIntValue(timeInString: startHour))
-            let endWorkinngHour = now.dateAt(hours: getTimeToIntValue(timeInString: endHour))
-            if now >= startWorkinngHour && now <= endWorkinngHour {
-                completion(true)
+        if validateOfficeHours(){
+            if weekday != 1 && weekday != 7 {
+                let fullArr:[String] = self.settingsModel?.settings?.workHours?.components(separatedBy: " ") ?? []
+                let startHour: String = fullArr[1]
+                let endHour: String = fullArr[3]
+                let startWorkinngHour = now.dateAt(hours:getTimeToIntValue(timeInString: startHour))
+                let endWorkinngHour = now.dateAt(hours: getTimeToIntValue(timeInString: endHour))
+                if now >= startWorkinngHour && now <= endWorkinngHour {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
             } else {
                 completion(false)
             }
-        } else {
+        } else{
             completion(false)
         }
+
+    }
+    
+    func validateOfficeHours() -> Bool{
+        let workingHours = self.settingsModel?.settings?.workHours
+        guard let workingHours = workingHours?.contains("M-F") else { return false }
+        return workingHours ? true : false
     }
     
 }
